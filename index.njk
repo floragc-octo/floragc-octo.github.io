@@ -3,14 +3,24 @@ title: Test index
 layout: layouts/base.njk
 ---
 
-<h1>Bienvenue sur ce blog</h1>
-<h2>liste des tils</h2>
+<div class="inprogress">This site is in construction</div>
 
-{% for til in collections.tils | reverse %} {% if loop.index0 < 3 %}
-<article>
-  <h1>
-    <a href="{{ til.url | url }}">{{ til.data.title }}</a>
-  </h1>
-  {{ til.date }}
-</article>
-{% endif %} {% endfor %}
+<h1>Today I learned</h1>
+
+<section class="tag--list">
+  {% for tag in collections.tagList %}
+  <span class="tag__link">{{ tag }}</span>
+  {% endfor %}
+</section>
+
+<section class="list til--list">
+  {% for post in collections.post | reverse %} {% if loop.index0 < 3 %}
+  <article class="til--list__item">
+    <h1 class="til--list__item__title">
+      {{ post.data.title }}
+    </h1>
+    <p class="til--list__item__description">{{ post.data.description }}</p>
+    <a class="til--list__item__link" href="{{ post.url | url }}">Lire l'article</a>
+  </article>
+  {% endif %} {% endfor %}
+</section>

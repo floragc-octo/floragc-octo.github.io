@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="til">
+  <h1 class="til__title">{{ title }}</h1>
+  <section class="tag--list">
+    {% for tag in tags -%}
+    <span class="tag__link"> {{ tag }}</span>
+    {%- endfor %}
+  </section>
+  <div class="til__content">{{ content | safe }}</div>
+</article>
