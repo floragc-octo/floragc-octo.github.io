@@ -1,0 +1,16 @@
+---
+title: Test index
+layout: layouts/base.njk
+---
+
+<h1>Bienvenue sur ce blog</h1>
+<h2>liste des tils</h2>
+
+{% for til in collections.tils | reverse %} {% if loop.index0 < 3 %}
+<article>
+  <h1>
+    <a href="{{ til.url | url }}">{{ til.data.title }}</a>
+  </h1>
+  {{ til.date }}
+</article>
+{% endif %} {% endfor %}
