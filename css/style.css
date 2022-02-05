@@ -1,0 +1,161 @@
+:root {
+  --text-color: #2c3e50;
+  --border-color: #ccc;
+  --hover-border-color: #eee;
+  --title-border-color: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(20px, 1rem + 0.1vw, 24px);
+}
+
+html,
+body {
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem 3rem;
+  width: calc(800px + 2 * 3rem);
+  margin: auto;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 26px;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+  }
+}
+
+header a {
+  display: inline-block;
+  padding: 5px 10px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  background-color: #fff;
+
+  color: var(--text-color);
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.035rem;
+  line-height: 1.2;
+  margin: 1.5rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.til--list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 1rem;
+}
+
+.til--list__item {
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.til--list__item__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.til--list__item__date,
+.til--list__item__link {
+  font-size: 0.8rem;
+}
+
+.til__title {
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid;
+}
+
+.til__content {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.til__content > * + * {
+  margin-top: 0.8rem;
+}
+
+.til__content h2 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid var(--title-border-color);
+}
+
+.til__content pre[class*="language-"],
+.til__content code[class*="language-"] {
+  font-size: 0.7rem;
+}
+
+.til__content blockquote {
+  border-left: 5px solid var(--title-border-color);
+  padding-left: 1rem;
+  margin-left: 1rem;
+  font-style: italic;
+}
+
+.til__content p code {
+  background-color: var(--title-border-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.til__content ul li {
+  margin-inline-start: 3rem;
+  padding-inline-start: 1rem;
+}
+
+.tag--list {
+  margin-bottom: 0.5rem;
+}
+
+.tag--list > *:not(:last-child) {
+  margin-right: 0.2rem;
+}
+
+.tag__link {
+  display: inline-block;
+  padding: 5px 10px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #fff;
+
+  background-color: var(--text-color);
+  border-radius: 3px;
+}
+
+.inprogress {
+  background: #ffcc00;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+}

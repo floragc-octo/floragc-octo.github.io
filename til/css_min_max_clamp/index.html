@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/floragc-octo/css/style.css" />
+    <link href="https://unpkg.com/prismjs@1.26.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <title>Flora GC</title>
+  </head>
+  <body>
+    <header>
+      <a href="/floragc-octo/">Home</a>
+    </header>
+    <main>
+      
+<article class="til">
+  <h1 class="til__title">min(), max(), clamp()</h1>
+  <section class="tag--list">
+    <span class="tag__link"> post</span><span class="tag__link"> css</span><span class="tag__link"> gist</span>
+  </section>
+  <div class="til__content"><pre class="language-css"><code class="language-css"><span class="token property">width</span><span class="token punctuation">:</span> 45%<span class="token punctuation">;</span><br><br><span class="token comment">/* max-width */</span><br><span class="token property">max-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span><br><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">min</span><span class="token punctuation">(</span>600px<span class="token punctuation">,</span> 45%<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* prends la plus petite */</span><br><br><span class="token comment">/* min-width */</span><br><span class="token property">min-width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span><br><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">max</span><span class="token punctuation">(</span>500px<span class="token punctuation">,</span> 45%<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* prends la plus grande */</span><br><br><span class="token comment">/* peut aussi se comparer avec la hauteur */</span><br><span class="token comment">/* pour prendre la plus petite/grande */</span><br><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">min</span><span class="token punctuation">(</span>500px<span class="token punctuation">,</span> 45%<span class="token punctuation">,</span> 50vh<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">max</span><span class="token punctuation">(</span>600px<span class="token punctuation">,</span> 45%<span class="token punctuation">,</span> 50vh<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">/* pour combiner */</span><br><span class="token comment">/* clamp(minimum, ideal, maximum) */</span><br><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span>30%<span class="token punctuation">,</span> 600px<span class="token punctuation">,</span> 80vh<span class="token punctuation">)</span></code></pre>
+</div>
+</article>
+
+    </main>
+  </body>
+</html>
